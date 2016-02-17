@@ -19,15 +19,15 @@
     <div>
         <table class="style1">
             <tr>
-                <td>
+                <td colspan="3">
                     Image logo goes here</td>
             </tr>
             <tr>
-                <td>
+                <td colspan="3">
                     Navigation goes here</td>
             </tr>
             <tr>
-                <td>
+                <td colspan="3">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
             <p>
@@ -37,8 +37,17 @@
                 </td>
             </tr>
             <tr>
+                <td colspan="3">
+                    Footer heading
+                </td>
+            </tr>
+            <tr>
                 <td>
                     Footer</td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
             </tr>
         </table>
     </div>
