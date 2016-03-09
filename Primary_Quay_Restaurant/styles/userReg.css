@@ -1,0 +1,36 @@
+﻿body {
+}
+#container
+{
+    border: 1px solid #200C74;
+    border-radius: 5px;
+    width: 600px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #EDFFF0;
+}
+#container p
+{
+    font-family: Verdana;
+    font-size: 18px;
+
+}
+#container div
+{
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+}
+#user, #address
+{
+    border:1px solid #B7B7B7;
+}
+#login
+{
+    border:1px solid #FF7114;
+}
+#buttons
+{
+    height: 50px;
+}
