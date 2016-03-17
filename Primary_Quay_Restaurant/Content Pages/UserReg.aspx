@@ -188,7 +188,8 @@
 
         <asp:Button ID="btnBack" runat="server" Text="Back" Width="116px" />
 &nbsp;
-        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="116px" />
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="116px" 
+            CausesValidation="False" onclick="btnClear_Click" UseSubmitBehavior="False" />
 &nbsp;
         <asp:Button ID="btnSubmit" runat="server" Text="Register" Width="116px" 
             onclick="btnSubmit_Click" />

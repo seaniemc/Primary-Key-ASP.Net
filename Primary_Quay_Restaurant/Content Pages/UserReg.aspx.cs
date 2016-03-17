@@ -9,15 +9,19 @@ using System.Data;
 
 public partial class UserReg : System.Web.UI.Page
 {
-
-    private string useremail;
-    private string txt;
-
     protected void Page_Load(object sender, EventArgs e)
     {
         //ddlCounty.SelectedIndex = -1;
-        useremail = "";
-        txt = "";
+
+        //::::::::::::::::::::::::::::::::::::::::
+        // !!!PROBLEM!!!
+        // for some reason DDL value
+        // is allways first element even when other
+        // element is selected from DDL if 
+        // ddlCounty.SelectedIndex = -1; 
+        // Also this expression should empty DDL
+        // after page is loded, BUT it is not.
+        //::::::::::::::::::::::::::::::::::::::::
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
@@ -48,7 +52,6 @@ public partial class UserReg : System.Web.UI.Page
                 // retriev id
                 DataView dv = (DataView)dsUser.Select(new DataSourceSelectArguments());
                 id = (int)dv.Table.Rows[0][0];
-                lblError.Text = "id = " + id + "\nCounty id = " + ddlCounty.SelectedValue;
                 
                 // insert into login
                 dsLogin.InsertParameters["userid"].DefaultValue = Convert.ToString(id);
@@ -74,5 +77,20 @@ public partial class UserReg : System.Web.UI.Page
                     + "Message: " + ex.Message;
             }
         }
+    }
+    protected void btnClear_Click(object sender, EventArgs e)
+    {
+        // clear fields
+        txbName.Text = "";
+        txbAge.Text = "";
+        txbEmail.Text = "";
+        txbPhone.Text = "";
+        txbStreet1.Text = "";
+        txbStreet2.Text = "";
+        txbCity.Text = "";
+        ddlCounty.SelectedIndex = 0;
+        txbUsername.Text = "";
+        txbPass.Text = "";
+        txbPass2.Text = "";
     }
 }
