@@ -6,12 +6,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 <div id="container">
+
+    <h3>USER REGISTRATION</h3>
+    
     <div id="user">
     <p>User Details</p>
         <table class="style1">
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Name:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbName" runat="server" Width="220px"></asp:TextBox>
@@ -24,7 +27,7 @@
             </tr>
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label2" runat="server" Text="Age:"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Age:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbAge" runat="server" Width="220px"></asp:TextBox>
@@ -40,7 +43,7 @@
             </tr>
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label3" runat="server" Text="Email:"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Email:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbEmail" runat="server" Width="220px"></asp:TextBox>
@@ -56,7 +59,7 @@
             </tr>
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label4" runat="server" Text="Phone Num.:"></asp:Label>
+                    <asp:Label ID="Label4" runat="server" Text="Phone Num.:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbPhone" runat="server" Width="220px"></asp:TextBox>
@@ -75,7 +78,7 @@
         <table class="style1">
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label5" runat="server" Text="Street1:"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" Text="Street1:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbStreet1" runat="server" Width="220px"></asp:TextBox>
@@ -88,7 +91,7 @@
             </tr>
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label6" runat="server" Text="Street2:"></asp:Label>
+                    <asp:Label ID="Label6" runat="server" Text="Street2:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbStreet2" runat="server" Width="220px"></asp:TextBox>
@@ -98,7 +101,7 @@
             </tr>
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label7" runat="server" Text="City/Town:"></asp:Label>
+                    <asp:Label ID="Label7" runat="server" Text="City/Town:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbCity" runat="server" Width="220px"></asp:TextBox>
@@ -111,11 +114,11 @@
             </tr>
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label8" runat="server" Text="County:"></asp:Label>
+                    <asp:Label ID="Label8" runat="server" Text="County:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
-                    <asp:DropDownList ID="ddlCounty" runat="server" Width="226px" 
-                        DataSourceID="dsCounty" DataTextField="county" DataValueField="id">
+                    <asp:DropDownList ID="ddlCounty" runat="server" DataSourceID="dsCounty" 
+                        DataTextField="county" DataValueField="id" Width="226px">
                     </asp:DropDownList>
                 </td>
                 <td>
@@ -125,15 +128,15 @@
                 </td>
             </tr>
         </table>
-
     </div>
 
+    
     <div id="login">
     <p>Login</p>
         <table class="style1">
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label9" runat="server" Text="Username:"></asp:Label>
+                    <asp:Label ID="Label9" runat="server" Text="Username:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbUsername" runat="server" Width="220px"></asp:TextBox>
@@ -146,7 +149,7 @@
             </tr>
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label10" runat="server" Text="Password:"></asp:Label>
+                    <asp:Label ID="Label10" runat="server" Text="Password:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbPass" runat="server" Width="220px"></asp:TextBox>
@@ -162,7 +165,8 @@
             </tr>
             <tr>
                 <td width="200">
-                    <asp:Label ID="Label11" runat="server" Text="Confirm Password:"></asp:Label>
+                    <asp:Label ID="Label11" runat="server" Text="Confirm Password:" 
+                        Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
                     <asp:TextBox ID="txbPass2" runat="server" Width="220px"></asp:TextBox>
@@ -192,33 +196,47 @@
     </div>
 
     <div id="errors">
+        <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+
+        
+        
         <asp:ValidationSummary ID="vlRegistration" runat="server" ForeColor="Red" 
             HeaderText="Form is incoplete" />
+        
     </div>
     <asp:SqlDataSource ID="dsCounty" runat="server" 
         ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
         SelectCommand="SELECT * FROM [countys]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="dsUser" runat="server" 
         ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
-        SelectCommand="INSERT INTO users(name, age, email, phone, street1, street2, city, countyid) VALUES (@name, @age, @email, @phone, @street1, @street2, @city, @county)">
+        SelectCommand="SELECT id FROM users WHERE email = @email" 
+        
+        InsertCommand="INSERT INTO users(name, age, email, phone, street1, street2, city, countyid) VALUES (@name, @age, @email, @phone, @street1, @street2, @city, @county)">
+        <InsertParameters>
+            <asp:Parameter Name="name" />
+            <asp:Parameter Name="age" />
+            <asp:Parameter Name="email" />
+            <asp:Parameter Name="phone" />
+            <asp:Parameter Name="street1" />
+            <asp:Parameter Name="street2" />
+            <asp:Parameter Name="city" />
+            <asp:Parameter Name="county" />
+        </InsertParameters>
         <SelectParameters>
-            <asp:ControlParameter ControlID="txbName" Name="name" PropertyName="Text" />
-            <asp:ControlParameter ControlID="txbAge" Name="age" PropertyName="Text" 
-                Type="Int16" />
-            <asp:ControlParameter ControlID="txbEmail" Name="email" PropertyName="Text" 
-                Type="String" />
-            <asp:ControlParameter ControlID="txbPhone" Name="phone" PropertyName="Text" 
-                Type="Int32" />
-            <asp:ControlParameter ControlID="txbStreet1" Name="street1" 
-                PropertyName="Text" />
-            <asp:ControlParameter ControlID="txbStreet2" Name="street2" 
-                PropertyName="Text" />
-            <asp:ControlParameter ControlID="txbCity" Name="city" PropertyName="Text" />
-            <asp:ControlParameter ControlID="ddlCounty" Name="county" 
-                PropertyName="SelectedValue" Type="Int16" />
+            <asp:ControlParameter ControlID="txbEmail" 
+                DefaultValue="andrei.lavrinovic@gmail.com" Name="email" PropertyName="Text" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="dsLogin" runat="server"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="dsLogin" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
+        InsertCommand="INSERT INTO login(userid, username, password) VALUES (@userid, @username, @password)" 
+        SelectCommand="SELECT login.* FROM login">
+        <InsertParameters>
+            <asp:Parameter Name="userid" />
+            <asp:Parameter Name="username" />
+            <asp:Parameter Name="password" />
+        </InsertParameters>
+    </asp:SqlDataSource>
 </div>
 </asp:Content>
 

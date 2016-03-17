@@ -10,6 +10,11 @@ body {
     margin: 50px auto;
     background-color: #EDFFF0;
 }
+#container h3
+{
+    font-family: Arial;
+    color: #4C4C4C;
+}
 #container p
 {
     font-family: Verdana;
