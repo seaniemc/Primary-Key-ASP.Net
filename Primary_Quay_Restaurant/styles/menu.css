@@ -1,0 +1,33 @@
+﻿*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container
+{
+    border: 1px solid #200C74;
+    border-radius: 5px;
+    width: 600px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #EDFFF0;
+}
+
+#container h3
+{
+    font-family: Arial;
+    color: #4C4C4C;
+}
+
+#sides
+{
+    border: 1px solid #ADADAD;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px 0px;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: normal;
+    color: #303030;
+}
