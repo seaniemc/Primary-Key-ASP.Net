@@ -27,17 +27,35 @@
 
         <div id="mealList">
             <asp:GridView ID="gvMeals" runat="server" AutoGenerateColumns="False" 
-                DataSourceID="sdsMeals">
+                DataSourceID="sdsMeals" DataKeyNames="mealid">
                 <Columns>
-                    <asp:BoundField DataField="name" HeaderText="Meal" />
-                    <asp:BoundField DataField="description" HeaderText="Description" />
-                    <asp:BoundField DataField="price" DataFormatString="{0:c}" HeaderText="Price" />
-                    <asp:TemplateField HeaderText="Qty"></asp:TemplateField>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                    <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" 
+                        ReadOnly="True" >
+                    <ControlStyle BorderStyle="None" />
+                    <ItemStyle CssClass="mName mFields" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="description" HeaderText="description" 
+                        SortExpression="description" >
+                    <ItemStyle CssClass="mFields" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" 
+                        DataFormatString="{0:c}" >
+                    <ItemStyle CssClass="mFields" />
+                    </asp:BoundField>
+                    <asp:TemplateField HeaderText="Qty">
+                        <ItemTemplate>
+                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        </ItemTemplate>
+                        <ItemStyle CssClass="mFields" />
+                    </asp:TemplateField>
+                    <asp:CommandField ButtonType="Button" ShowSelectButton="True" >
+                    <ItemStyle CssClass="mFields" />
+                    </asp:CommandField>
                 </Columns>
             </asp:GridView>
+            <br />
+            <br />
         </div>
-    
     </div>
 
 
