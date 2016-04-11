@@ -27,30 +27,25 @@
 
         <div id="mealList">
             <asp:GridView ID="gvMeals" runat="server" AutoGenerateColumns="False" 
-                DataSourceID="sdsMeals" DataKeyNames="mealid">
+                DataSourceID="sdsMeals" DataKeyNames="mealid" 
+                onselectedindexchanged="gvMeals_SelectedIndexChanged">
                 <Columns>
-                    <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" 
-                        ReadOnly="True" >
-                    <ControlStyle BorderStyle="None" />
-                    <ItemStyle CssClass="mName mFields" />
+                    <asp:BoundField DataField="mealid" HeaderText="Id" InsertVisible="False" 
+                        ReadOnly="True" SortExpression="mealid" Visible="False" />
+                    <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" >
                     </asp:BoundField>
                     <asp:BoundField DataField="description" HeaderText="description" 
                         SortExpression="description" >
-                    <ItemStyle CssClass="mFields" />
                     </asp:BoundField>
                     <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" 
                         DataFormatString="{0:c}" >
-                    <ItemStyle CssClass="mFields" />
                     </asp:BoundField>
-                    <asp:TemplateField HeaderText="Qty">
+                    <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="tbxQty" runat="server"></asp:TextBox>
                         </ItemTemplate>
-                        <ItemStyle CssClass="mFields" />
                     </asp:TemplateField>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="True" >
-                    <ItemStyle CssClass="mFields" />
-                    </asp:CommandField>
+                    <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
                 </Columns>
             </asp:GridView>
             <br />
@@ -66,7 +61,7 @@
         SelectCommand="SELECT * FROM [sides]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="sdsMeals" runat="server" 
         ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
-        SelectCommand="SELECT [price], [description], [name], [mealid] FROM [meals] WHERE ([sideid] = @sideid)">
+        SelectCommand="SELECT * FROM [meals] WHERE ([sideid] = @sideid)">
         <SelectParameters>
             <asp:ControlParameter ControlID="ddlSides" DefaultValue="701" Name="sideid" 
                 PropertyName="SelectedValue" Type="Int32" />
