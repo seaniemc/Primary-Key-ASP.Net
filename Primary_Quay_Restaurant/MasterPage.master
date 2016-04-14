@@ -69,8 +69,10 @@
                 <td class="style2" width="33%">
                     &nbsp;</td>
                 <td class="style2" width="33%" align="center">
-                    <asp:Image ID="Image1" runat="server" Height="100px" 
-                        ImageUrl="~/Images/facebook.png" Width="100px" />
+                    <asp:Image ID="Image2" runat="server" Height="50px" 
+                        ImageUrl="~/Images/twitter.png" Width="50px" />
+                    <asp:Image ID="Image1" runat="server" Height="50px" 
+                        ImageUrl="~/Images/facebook.png" Width="50px" />
                     </td>
                 <td class="style2" width="33%">
                     </td>
