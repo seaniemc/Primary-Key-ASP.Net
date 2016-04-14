@@ -13,7 +13,13 @@ public partial class Menu : System.Web.UI.Page
  
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //if (!IsPostBack)
+        //{
+        //    if (!(Request.Cookies["userid"] == null))
+        //    {
+        //        Response.Redirect("Home.aspx");
+        //    }
+        //}
     }
     protected void gvMeals_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -25,6 +31,8 @@ public partial class Menu : System.Web.UI.Page
             {
                 order.mealid = Convert.ToInt32(gvMeals.SelectedValue);
                 order.qty = Convert.ToInt32(tb.Text);
+                string price = gvMeals.Rows[gvMeals.SelectedIndex].Cells[2].Text;
+                order.price = Convert.ToDouble(gvMeals.Rows[gvMeals.SelectedIndex].Cells[2].Text);
 
                 orderlist.Add(order);
                 tb.Text = "1";
@@ -64,26 +72,27 @@ public partial class Menu : System.Web.UI.Page
             return false;
         }
     }
+
     protected void btnMakeOrder_Click(object sender, EventArgs e)
     {
-        string items = "items";
-        string mealid = "mealid";
-        string qty = "qty";
 
         if (orderlist != null)
         {
+            double totalPrice = 0;
 
-            // create cookie that will contain number list length
-            addCookie(items, String.Format("{0}", orderlist.Count));
-
-            int i = 0;
             foreach (OrderList order in orderlist)
             {
-                addCookie(mealid + (i++), String.Format("{0}", order.mealid));
-                addCookie(qty + (i++), String.Format("{0}", order.qty));
+                totalPrice += order.price;
             }
 
-            Response.Redirect("Order.aspx");
+            // insert into users
+            sdsOrder.InsertParameters["userid"].DefaultValue = Request.Cookies["userid"].Value;
+            sdsOrder.InsertParameters["price"].DefaultValue = Convert.ToString(totalPrice);
+
+            sdsOrder.Insert();
+
+            orderlist.Clear();
+
         }
     }
 

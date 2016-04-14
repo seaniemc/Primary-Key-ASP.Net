@@ -9,6 +9,7 @@ using System.Web;
 public class OrderList
 {
     public int mealid { get; set; }
+    public double price { get; set; }
     public int qty { get; set; }
 
 	public OrderList()
