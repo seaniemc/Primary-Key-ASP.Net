@@ -17,6 +17,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <asp:Image ID="imgLogoImage" runat="server" BorderWidth="10px" Height="195px" 
+            ImageUrl="~/Images/stolen_pic.jpg" Width="942px" />
         <table class="style1">
             <tr>
                 <td colspan="3">
@@ -25,6 +27,16 @@
             <tr>
                 <td colspan="3">
                     Navigation goes here</td>
+                    <asp:Menu ID="HorizontalNav" Orientation="Horizontal" runat="server">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Content Pages/Home.aspx" Text="Home"/>
+                            <asp:MenuItem NavigateUrl="~/Content Pages/About.aspx" Text="About"/>
+                            <asp:MenuItem NavigateUrl="~/Content Pages/Locations.aspx" Text="Locations"/>
+                            <asp:MenuItem NavigateUrl="~/Content Pages/Menu.aspx" Text="Menu"/>
+                            <asp:MenuItem NavigateUrl="~/Content Pages/Order.aspx" Text="Order"/>
+                            <asp:MenuItem NavigateUrl="~/Content Pages/UserReg.aspx" Text="User Registration"/>
+                        </Items>
+                    </asp:Menu>
             </tr>
             <tr>
                 <td colspan="3">
