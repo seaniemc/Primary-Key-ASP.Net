@@ -12,6 +12,10 @@
         {
             width: 100%;
         }
+        .style2
+        {
+            height: 23px;
+        }
     </style>
 </head>
 <body>
@@ -19,15 +23,20 @@
     <div>
         <table class="style1">
             <tr>
-                <td colspan="3">
-                    <asp:Image ID="imgLogoImage" runat="server" BorderWidth="10px" Height="195px" 
+                <td colspan="3" align="center">
+                    <asp:Image ID="imgLogoImage" runat="server" Height="195px" 
             ImageUrl="~/Images/stolen_pic.jpg" Width="942px" />
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <asp:Menu ID="HorizontalNav" Orientation="Horizontal" runat="server" 
-                    RenderingMode="List" ItemWrap="True">
+
+                    <asp:Menu ID="HorizontalNav" 
+                              Orientation="Horizontal" 
+                              runat="server" 
+                              RenderingMode="List" 
+                              ItemWrap="True">
+
                         <Items>
                             <asp:MenuItem NavigateUrl="~/Content Pages/Home.aspx" Text="Home"/>
                             <asp:MenuItem NavigateUrl="~/Content Pages/About.aspx" Text="About"/>
@@ -36,7 +45,9 @@
                             <asp:MenuItem NavigateUrl="~/Content Pages/Order.aspx" Text="Order"/>
                             <asp:MenuItem NavigateUrl="~/Content Pages/UserReg.aspx" Text="User Registration"/>
                         </Items>
+
                     </asp:Menu>
+
                 </td>
                    
             </tr>
@@ -51,17 +62,16 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3">
-                    Footer heading
-                </td>
+                <td colspan="3" align="center">
+                    Authentic European Food To Take Home</td>
             </tr>
             <tr>
-                <td>
+                <td class="style2">
                     Footer</td>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
+                <td class="style2">
+                    </td>
+                <td class="style2">
+                    </td>
             </tr>
         </table>
     </div>
