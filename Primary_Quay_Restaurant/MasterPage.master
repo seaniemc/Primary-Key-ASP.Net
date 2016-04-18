@@ -9,11 +9,18 @@
     </asp:ContentPlaceHolder>
 
     <style type="text/css">
-    
+       
         body 
         {
+           
             background-color : white;
-            width : 100%;
+            width: 100%;
+        }
+        
+        #MainContent
+        {
+            
+            text-align :  center;           
         }
 
         .style1
@@ -31,11 +38,12 @@
             margin-left : 600px;
         }
         
-        #FooterText
-        {
-            margin-top : 10px;
-            margin-bottom : 10px;
+        #VerticalMenu
+        {     
+              margin-left : 400px;
         }
+        
+      
         
         #TextInFooter
         {
@@ -46,19 +54,28 @@
             color : #660066;
             
         }
-        
+          
        .images
        {
            display: inline-block;
            margin-left : 20px;
        }
+        .style3
+        {
+            height : 23px;
+            width: 28%;
+        }
     </style>
  
 </head>
 
 <body>
+
+<div id="container">
+
     <form id="form1" runat="server">
-    <div>
+
+
         <table class="style1">
             <tr>
                 <td colspan="3" align="center">
@@ -113,15 +130,17 @@
                    
             </tr>
 
-            <tr>
+            <tr style="width : 1000px">
+
                 <td colspan="3">
 
-                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
-                        <p>
-                            Main Content</p>
+                            <p>
+                                Main Content
+                            </p>
         
-                    </asp:ContentPlaceHolder>
+                        </asp:ContentPlaceHolder>
 
                 </td>
             </tr>
@@ -142,7 +161,7 @@
                 <td class="style2" width="33%">
                     &nbsp;</td>
 
-                <td class="style2" width="33%" align="center">
+                <td class="style3" align="center">
 
                     <div class="images">
 
@@ -185,10 +204,8 @@
 
         </table>
 
-    </div>
-
     </form>
-
+</div>
 </body>
 
 </html>

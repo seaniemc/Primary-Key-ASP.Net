@@ -12,8 +12,9 @@
 
         <asp:Image ID="Image1" 
                    runat="server" 
-                   ImageAlign="AbsMiddle" 
-                   ImageUrl="~/Images/stolen_pic.jpg" />
+                   ImageAlign="Middle" 
+                   ImageUrl="~/Images/stolen_pic.jpg"
+                   Width="750px" />
 
     </div>
 
