@@ -7,28 +7,34 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+
     <style type="text/css">
-        body
+    
+        body 
         {
-            
             background-color : white;
             width : 100%;
-            
         }
+
         .style1
         {
             width : 100%;
         }
+
         .style2
         {
             height : 23px;
         }
+
         #MenuNav
         {
             margin-left : 600px;
         }
+    
     </style>
+ 
 </head>
+
 <body>
     <form id="form1" runat="server">
     <div>
@@ -40,7 +46,7 @@
                                runat="server" 
                                Height="195px" 
                                ImageUrl="~/Images/stolen_pic.jpg" 
-                               Width="942px" />
+                               Width="1000px" />
 
                 </td>
 
