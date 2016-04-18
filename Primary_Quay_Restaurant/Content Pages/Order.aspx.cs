@@ -39,7 +39,7 @@ public partial class Order : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        //Response.Redirect("Login.aspx");
+        Response.Redirect("Login.aspx");
     }
 
     private string getCookieUserId()

@@ -13,15 +13,15 @@
 
         <div id="orderSection">
             
-            <div runat="server" id="doLogin">
+            <div runat="server" id="doLogin" class="doLogin">
                 <p>To make an order you must be registered user. If you already registered you need to be loged in.</p>
                 <asp:Button ID="btnRegister" runat="server" Text="Register" 
-                    onclick="btnRegister_Click" />
+                    onclick="btnRegister_Click" Width="100px" />
                 <asp:Button ID="btnLogin" runat="server" Text="Login" 
-                    onclick="btnLogin_Click" />
+                    onclick="btnLogin_Click" Width="100px" />
             </div>
 
-            <div runat="server" id="doOrder">
+            <div runat="server" id="doOrder" class="doOrder">
                 <p>After clicking the button "Make order" you will be redirected to the menu page, where you can pic
                 our delicious meal. Enjoy.</p>
                 <asp:Button ID="btnMakeOrder" runat="server" Text="Make order" 
