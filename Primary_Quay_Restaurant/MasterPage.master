@@ -8,13 +8,24 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
+        body
+        {
+            
+            background-color : white;
+            width : 100%;
+            
+        }
         .style1
         {
-            width: 100%;
+            width : 100%;
         }
         .style2
         {
-            height: 23px;
+            height : 23px;
+        }
+        #MenuNav
+        {
+            margin-left : 750px;
         }
     </style>
 </head>
@@ -29,25 +40,28 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3">
+                <td colspan="3" align="center">
 
-                    <asp:Menu ID="HorizontalNav" 
-                              Orientation="Horizontal" 
-                              runat="server" 
-                              RenderingMode="List" 
-                              ItemWrap="True">
+                    <div id="MenuNav">
 
-                        <Items>
-                            <asp:MenuItem NavigateUrl="~/Content Pages/Home.aspx" Text="Home"/>
-                            <asp:MenuItem NavigateUrl="~/Content Pages/About.aspx" Text="About"/>
-                            <asp:MenuItem NavigateUrl="~/Content Pages/Locations.aspx" Text="Locations"/>
-                            <asp:MenuItem NavigateUrl="~/Content Pages/Menu.aspx" Text="Menu"/>
-                            <asp:MenuItem NavigateUrl="~/Content Pages/Order.aspx" Text="Order"/>
-                            <asp:MenuItem NavigateUrl="~/Content Pages/UserReg.aspx" Text="User Registration"/>
-                        </Items>
+                        <asp:Menu ID="HorizontalNav" 
+                                  Orientation="Horizontal" 
+                                  runat="server" 
+                                  RenderingMode="List" 
+                                  ItemWrap="True">
 
-                    </asp:Menu>
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Content Pages/Home.aspx" Text="Home"/>
+                                <asp:MenuItem NavigateUrl="~/Content Pages/About.aspx" Text="About"/>
+                                <asp:MenuItem NavigateUrl="~/Content Pages/Locations.aspx" Text="Locations"/>
+                                <asp:MenuItem NavigateUrl="~/Content Pages/Menu.aspx" Text="Menu"/>
+                                <asp:MenuItem NavigateUrl="~/Content Pages/Order.aspx" Text="Order"/>
+                                <asp:MenuItem NavigateUrl="~/Content Pages/UserReg.aspx" Text="User Registration"/>
+                            </Items>
 
+                        </asp:Menu>
+
+                    </div>
                 </td>
                    
             </tr>
