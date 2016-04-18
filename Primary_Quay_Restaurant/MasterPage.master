@@ -25,7 +25,7 @@
         }
         #MenuNav
         {
-            margin-left : 750px;
+            margin-left : 600px;
         }
     </style>
 </head>
@@ -40,9 +40,9 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3" align="center">
+                <td colspan="3">
 
-                    <div id="MenuNav">
+                    <div id="MenuNav" align="center">
 
                         <asp:Menu ID="HorizontalNav" 
                                   Orientation="Horizontal" 
@@ -58,6 +58,12 @@
                                 <asp:MenuItem NavigateUrl="~/Content Pages/Order.aspx" Text="Order"/>
                                 <asp:MenuItem NavigateUrl="~/Content Pages/UserReg.aspx" Text="User Registration"/>
                             </Items>
+
+                            <StaticHoverStyle ForeColor="Yellow" />
+                            <StaticMenuItemStyle BorderColor="White" BorderStyle="Solid" BorderWidth="1px" 
+                                Font-Size="XX-Large" ForeColor="#660066" HorizontalPadding="5px" 
+                                VerticalPadding="5px" />
+                            <StaticSelectedStyle Font-Bold="False" Font-Size="XX-Large" />
 
                         </asp:Menu>
 
