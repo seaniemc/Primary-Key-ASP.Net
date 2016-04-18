@@ -68,12 +68,30 @@
             <tr>
                 <td class="style2" width="33%">
                     &nbsp;</td>
+
                 <td class="style2" width="33%" align="center">
-                    <asp:Image ID="Image2" runat="server" Height="50px" 
-                        ImageUrl="~/Images/twitter.png" Width="50px" />
-                    <asp:Image ID="Image1" runat="server" Height="50px" 
-                        ImageUrl="~/Images/facebook.png" Width="50px" />
+                    <asp:Image ID="Image3" 
+                               runat="server" 
+                               AlternateText="YouTube Image" 
+                               Height="50px" 
+                               ImageUrl="~/Images/youTube.png" 
+                               Width="50px" />
+
+                    <asp:Image ID="Image2" 
+                               runat="server" 
+                               Height="50px" 
+                               ImageUrl="~/Images/twitter.png" 
+                               Width="50px" 
+                               AlternateText="Twitter Image" />
+
+                    <asp:Image ID="Image1"
+                               runat="server" 
+                               Height="50px" 
+                               ImageUrl="~/Images/facebook.png" 
+                               Width="50px" 
+                               AlternateText="Facebook Image"/>
                     </td>
+
                 <td class="style2" width="33%">
                     </td>
             </tr>
