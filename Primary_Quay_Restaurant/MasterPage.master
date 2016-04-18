@@ -35,11 +35,19 @@
         <table class="style1">
             <tr>
                 <td colspan="3" align="center">
-                    <asp:Image ID="imgLogoImage" runat="server" Height="195px" 
-            ImageUrl="~/Images/stolen_pic.jpg" Width="942px" />
+
+                    <asp:Image ID="imgLogoImage" 
+                               runat="server" 
+                               Height="195px" 
+                               ImageUrl="~/Images/stolen_pic.jpg" 
+                               Width="942px" />
+
                 </td>
+
             </tr>
+
             <tr>
+
                 <td colspan="3">
 
                     <div id="MenuNav" align="center">
@@ -56,13 +64,19 @@
                                 <asp:MenuItem NavigateUrl="~/Content Pages/Locations.aspx" Text="Locations"/>
                                 <asp:MenuItem NavigateUrl="~/Content Pages/Menu.aspx" Text="Menu"/>
                                 <asp:MenuItem NavigateUrl="~/Content Pages/Order.aspx" Text="Order"/>
-                                <asp:MenuItem NavigateUrl="~/Content Pages/UserReg.aspx" Text="User Registration"/>
+                                <asp:MenuItem NavigateUrl="~/Content Pages/UserReg.aspx" Text="Registration"/>
                             </Items>
 
-                            <StaticHoverStyle ForeColor="Yellow" />
-                            <StaticMenuItemStyle BorderColor="White" BorderStyle="Solid" BorderWidth="1px" 
-                                Font-Size="XX-Large" ForeColor="#660066" HorizontalPadding="5px" 
-                                VerticalPadding="5px" />
+                            <StaticHoverStyle ForeColor="#993366" />
+
+                            <StaticMenuItemStyle BorderColor="White" 
+                                                 BorderStyle="Solid" 
+                                                 BorderWidth="1px" 
+                                                 Font-Size="XX-Large" 
+                                                 ForeColor="#660066" 
+                                                 HorizontalPadding="10px" 
+                                                 VerticalPadding="5px" />
+
                             <StaticSelectedStyle Font-Bold="False" Font-Size="XX-Large" />
 
                         </asp:Menu>
@@ -71,20 +85,30 @@
                 </td>
                    
             </tr>
+
             <tr>
                 <td colspan="3">
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
-            <p>
-                Main Content</p>
+                        <p>
+                            Main Content</p>
         
-        </asp:ContentPlaceHolder>
+                    </asp:ContentPlaceHolder>
+
                 </td>
             </tr>
+
             <tr>
+
                 <td colspan="3" align="center">
-                    Authentic European Food To Take Home</td>
+
+                    Authentic European Food To Take Home
+
+                </td>
+
             </tr>
+
             <tr>
                 <td class="style2" width="33%">
                     &nbsp;</td>
