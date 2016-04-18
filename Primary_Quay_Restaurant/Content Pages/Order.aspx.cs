@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 public partial class Order : System.Web.UI.Page
 {
@@ -51,6 +52,20 @@ public partial class Order : System.Web.UI.Page
         {
             return null;
         }
+    }
+
+    private void addCookie(string name, string value)
+    {
+        HttpCookie cookie = new HttpCookie(name, value);
+        cookie.Expires = DateTime.Now.AddMinutes(5);
+        Response.Cookies.Add(cookie);
+    }
+
+    private void deleteCookie(string name)
+    {
+        HttpCookie cookie = new HttpCookie(name);
+        cookie.Expires = DateTime.Now.AddSeconds(-1);
+        Response.Cookies.Add(cookie);
     }
 
     protected void btnMakeOrder_Click(object sender, EventArgs e)

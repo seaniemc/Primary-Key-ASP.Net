@@ -47,6 +47,13 @@
             <asp:Parameter Name="id" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="sdsMakeOrder" runat="server"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="sdsMakeOrder" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
+        InsertCommand="INSERT INTO [order] (userid) VALUES (@userid)" 
+        SelectCommand="SELECT MAX(orderid) FROM [order]">
+        <InsertParameters>
+            <asp:Parameter Name="userid" />
+        </InsertParameters>
+    </asp:SqlDataSource>
 </asp:Content>
 
