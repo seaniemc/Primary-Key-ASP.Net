@@ -9,14 +9,44 @@
         
         <!--::::::::::::::::::::::::::::PAGE CONTENT HERE:::::::::::::::::::::::::::::::-->
 
-        <h3>Checkout</h3>
+        <h3>Make an order.</h3>
 
-        <div id="checkout">
-            <asp:GridView ID="GridView1" runat="server">
-            </asp:GridView>
+        <div id="orderSection">
+            
+            <div runat="server" id="doLogin">
+                <p>To make an order you must be registered user. If you already registered you need to be loged in.</p>
+                <asp:Button ID="btnRegister" runat="server" Text="Register" 
+                    onclick="btnRegister_Click" />
+                <asp:Button ID="btnLogin" runat="server" Text="Login" 
+                    onclick="btnLogin_Click" />
+            </div>
+
+            <div runat="server" id="doOrder">
+                <p>After clicking the button "Make order" you will be redirected to the menu page, where you can pic
+                our delicious meal. Enjoy.</p>
+                <asp:Button ID="btnMakeOrder" runat="server" Text="Make order" 
+                    onclick="btnMakeOrder_Click" />
+            </div>
+
         </div>
     
     </div>
-
+    <asp:SqlDataSource ID="sdsOrder" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
+        DeleteCommand="DELETE FROM orderlist WHERE (id = @id)" 
+        SelectCommand="SELECT orderlist.id, meals.name, orderlist.qty, meals.price FROM orderlist INNER JOIN meals ON orderlist.mealid = meals.mealid WHERE (orderlist.orderid = @orderid)" 
+        UpdateCommand="UPDATE orderlist SET qty = @qty WHERE (id = @id)">
+        <DeleteParameters>
+            <asp:Parameter Name="id" />
+        </DeleteParameters>
+        <SelectParameters>
+            <asp:CookieParameter CookieName="orderid" Name="orderid" />
+        </SelectParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="qty" />
+            <asp:Parameter Name="id" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="sdsMakeOrder" runat="server"></asp:SqlDataSource>
 </asp:Content>
 
