@@ -30,7 +30,20 @@
         {
             margin-left : 600px;
         }
-    
+        
+        #FooterText
+        {
+            
+            font-size : xx-large;
+            
+        }
+        
+       .images
+       {
+           
+           display: inline-block;
+           
+       }
     </style>
  
 </head>
@@ -44,7 +57,7 @@
 
                     <asp:Image ID="imgLogoImage" 
                                runat="server" 
-                               Height="195px" 
+                               Height="180px" 
                                ImageUrl="~/Images/stolen_pic.jpg" 
                                Width="1000px" />
 
@@ -107,7 +120,7 @@
 
             <tr>
 
-                <td colspan="3" align="center">
+                <td id="FooterText" colspan="3" align="center">
 
                     Authentic European Food To Take Home
 
@@ -120,27 +133,42 @@
                     &nbsp;</td>
 
                 <td class="style2" width="33%" align="center">
-                    <asp:Image ID="Image3" 
-                               runat="server" 
-                               AlternateText="YouTube Image" 
-                               Height="50px" 
-                               ImageUrl="~/Images/youTube.png" 
-                               Width="50px" />
 
-                    <asp:Image ID="Image2" 
-                               runat="server" 
-                               Height="50px" 
-                               ImageUrl="~/Images/twitter.png" 
-                               Width="50px" 
-                               AlternateText="Twitter Image" />
+                        <div class="images">
 
-                    <asp:Image ID="Image1"
-                               runat="server" 
-                               Height="50px" 
-                               ImageUrl="~/Images/facebook.png" 
-                               Width="50px" 
-                               AlternateText="Facebook Image"/>
-                    </td>
+                            <asp:Image ID="Image3" 
+                                       runat="server" 
+                                       AlternateText="YouTube Image" 
+                                       Height="50px" 
+                                       ImageUrl="~/Images/youTube.png" 
+                                       Width="50px" />
+                        </div>
+
+                        <div class="images">
+
+                            <asp:Image ID="Image2" 
+                                       runat="server" 
+                                       Height="50px" 
+                                       ImageUrl="~/Images/twitter.png" 
+                                       Width="50px" 
+                                       AlternateText="Twitter Image" />
+
+                        </div>
+
+                        <div class="images">
+
+                            <asp:Image ID="Image1"
+                                       runat="server" 
+                                       Height="50px" 
+                                       ImageUrl="~/Images/facebook.png" 
+                                       Width="50px" 
+                                       AlternateText="Facebook Image"/>
+
+                        </div>
+
+                
+
+                </td>
 
                 <td class="style2" width="33%">
                     </td>
