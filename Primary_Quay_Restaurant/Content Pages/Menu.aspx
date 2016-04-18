@@ -101,5 +101,27 @@
                 PropertyName="SelectedValue" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
+    <asp:SqlDataSource ID="sdsOrder" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
+        InsertCommand="INSERT INTO [order] (userid, price) VALUES (@userid, @price)" 
+        SelectCommand="SELECT MAX(orderid) FROM [order]">
+        <InsertParameters>
+            <asp:Parameter Name="userid" />
+            <asp:Parameter Name="price" />
+        </InsertParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="sdsOrderlist" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
+        InsertCommand="INSERT INTO orderlist(orderid, mealid, qty) VALUES (@orderid, @mealid, @qty)" 
+        SelectCommand="SELECT id, orderid, mealid, qty FROM orderlist WHERE (orderid = @orderid)">
+        <InsertParameters>
+            <asp:Parameter Name="orderid" />
+            <asp:Parameter Name="mealid" />
+            <asp:Parameter Name="qty" />
+        </InsertParameters>
+        <SelectParameters>
+            <asp:Parameter Name="orderid" />
+        </SelectParameters>
+    </asp:SqlDataSource>
 </asp:Content>
 
