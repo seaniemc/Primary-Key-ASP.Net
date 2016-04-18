@@ -1,0 +1,51 @@
+﻿*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container
+{
+    border: 1px solid #200C74;
+    border-radius: 5px;
+    width: 600px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #EDFFF0;
+}
+
+#container h3
+{
+    font-family: Arial;
+    color: #4C4C4C;
+}
+
+#loginSection
+{
+    padding: 20px 10px;
+    width: 400px;
+    margin: 20px 0 0 0;
+    border: 1px solid #909090;
+    border-radius: 4px;
+}
+
+.labels
+{
+    font: normal 16px calibri;
+    color: #303030;
+    margin-bottom: 10px;
+}
+
+.text
+{
+    font: bolder 12px verdana;
+    color: #606060;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.btnLogin
+{
+    margin-left: 216px;
+    height: 30px;
+}
