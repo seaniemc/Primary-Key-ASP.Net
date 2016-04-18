@@ -20,13 +20,20 @@
     color: #4C4C4C;
 }
 
-#loginSection
+.loginSection
 {
     padding: 20px 10px;
     width: 400px;
     margin: 20px 0 0 0;
     border: 1px solid #909090;
     border-radius: 4px;
+}
+
+.loginSection p
+{
+    font: normal 12px calibri;
+    color: #606060;
+    margin-bottom: 10px;
 }
 
 .labels
@@ -44,8 +51,41 @@
     margin-bottom: 10px;
 }
 
+#btns
+{
+    border: 0px solid black;
+    width: 366px;
+    text-align: right;
+    margin-top: 10px;
+}
+
 .btnLogin
 {
-    margin-left: 216px;
+    display: inline-block;
+    height: 30px;
+}
+
+.errorMsg p
+{
+    font: normal 14px arial;
+    color: Red;
+    margin: 5px 0;
+}
+
+.lblLogoff
+{
+    font: bolder 14px arial;
+    color: #606060;
+}
+
+.logedin
+{
+    margin: 20px 0 30px 0;
+}
+
+.btnLogout
+{
+    margin-top: 30px;
+    width: 100px;
     height: 30px;
 }

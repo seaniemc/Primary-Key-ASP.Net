@@ -22,7 +22,15 @@
 
 #orderSection
 {
-    border: 1px solid #090909;
+    margin: 20px 0 0 0;
+    border: 1px solid #909090;
     border-radius: 6px;
-    padding: 5px;
+    padding: 10px;
+}
+
+.doOrder p, .doLogin p
+{
+    font: normal 14px verdana;
+    color: #303030;
+    margin: 20px 0 10px 0;
 }
