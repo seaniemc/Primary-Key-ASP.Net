@@ -14,7 +14,7 @@
         <asp:ListView ID="lvwLocations" runat="server" DataSourceID="dsLocations" 
             GroupItemCount="3">
             <AlternatingItemTemplate>
-                <td runat="server" style="background-color: #FFFFFF;color: #284775;">
+                <td runat="server" style="background-color: #FFFFFF;color: #284775; text-align: center;">
                     
                     <asp:Label ID="countyLabel" runat="server" Text='<%# Eval("county") %>' />
                     <br />
@@ -65,7 +65,7 @@
                 </td>
             </InsertItemTemplate>
             <ItemTemplate>
-                <td runat="server" style="background-color: #E0FFFF;color: #333333;">
+                <td align="center" runat="server" style="background-color: #EDFFF0;color: #333333; text-align: center;  padding: 10px;">
                     
                     <asp:Label ID="countyLabel" runat="server" Text='<%# Eval("county") %>' />
                     <br />
