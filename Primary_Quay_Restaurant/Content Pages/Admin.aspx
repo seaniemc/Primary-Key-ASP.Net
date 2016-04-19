@@ -59,7 +59,7 @@
                     onitemupdated="dvwCustomerDetails_ItemUpdated"
                     Width="140px" AutoGenerateRows="False" DataKeyNames="id" 
                     BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" 
-                    CellSpacing="2" ForeColor="Black">
+                    CellSpacing="2" ForeColor="Black" AllowPaging="True">
                     <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                     <Fields>
                         <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" 
