@@ -75,8 +75,9 @@ public partial class Order : System.Web.UI.Page
         sdsMakeOrder.Insert();
 
         // retrieve id form order table
-        DataView dv = (DataView)sdsOrder.Select(new DataSourceSelectArguments());
+        DataView dv = (DataView)sdsMakeOrder.Select(new DataSourceSelectArguments());
         int id = (int)dv.Table.Rows[0][0];
         addCookie("orderid", String.Format("{0}", id));
+        Response.Redirect("Menu.aspx");
     }
 }
