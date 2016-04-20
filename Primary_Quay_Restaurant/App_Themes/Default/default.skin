@@ -15,3 +15,5 @@ Default skin template. The following skins are provided as examples only.
 --%>
 
 <asp:DropDownList runat="server" BorderWidth="2px" />
+
+<asp:Button runat="server" BackColor="#660066" ForeColor="White"/>
