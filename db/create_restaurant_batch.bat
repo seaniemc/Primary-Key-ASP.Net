@@ -9,7 +9,7 @@
 :: the Payables database.
 
 ECHO Attempting to create the Payables database . . . 
-sqlcmd -S localhost\SQLExpress -E /i restourant.sql
+sqlcmd -S localhost\SQLExpress -E /i restourant_mod_1.sql
 ECHO.
 ECHO If no error message is shown, then the database was created successfully.
 ECHO.

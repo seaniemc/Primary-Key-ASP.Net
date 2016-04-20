@@ -35,7 +35,7 @@
 
         #MenuNav
         {
-            margin-left : 600px;
+           margin-left : 600px;
         }
         
         #VerticalMenu
@@ -71,12 +71,12 @@
 
 <body>
 
-<div id="container">
+<div id="containerMP">
 
     <form id="form1" runat="server">
 
 
-        <table class="style1">
+        <table class="style1" width="1000">
             <tr>
                 <td colspan="3" align="center">
 
@@ -92,9 +92,9 @@
 
             <tr>
 
-                <td colspan="3">
+                <td colspan="3" style="text-align: center;">
 
-                    <div id="MenuNav" align="center">
+                    <div id="MenuNav" style="margin-left: 630px;">
 
                         <asp:Menu ID="HorizontalNav" 
                                   Orientation="Horizontal" 
@@ -106,7 +106,6 @@
                                 <asp:MenuItem NavigateUrl="~/Content Pages/Home.aspx" Text="Home"/>
                                 <asp:MenuItem NavigateUrl="~/Content Pages/About.aspx" Text="About"/>
                                 <asp:MenuItem NavigateUrl="~/Content Pages/Locations.aspx" Text="Locations"/>
-                                <asp:MenuItem NavigateUrl="~/Content Pages/Menu.aspx" Text="Menu"/>
                                 <asp:MenuItem NavigateUrl="~/Content Pages/Order.aspx" Text="Order"/>
                                 <asp:MenuItem NavigateUrl="~/Content Pages/UserReg.aspx" Text="Registration"/>
                             </Items>
@@ -132,7 +131,7 @@
 
             <tr style="width : 1000px">
 
-                <td colspan="3">
+                <td colspan="3" class="mainSectionMP">
 
                         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
