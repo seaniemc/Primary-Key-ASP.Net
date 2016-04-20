@@ -93,4 +93,8 @@ public partial class UserReg : System.Web.UI.Page
         txbPass.Text = "";
         txbPass2.Text = "";
     }
+    protected void txbName_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

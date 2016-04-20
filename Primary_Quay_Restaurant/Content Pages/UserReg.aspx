@@ -17,7 +17,8 @@
                     <asp:Label ID="Label1" runat="server" Text="Name:" Font-Names="Calibri"></asp:Label>
                 </td>
                 <td width="250">
-                    <asp:TextBox ID="txbName" runat="server" Width="220px"></asp:TextBox>
+                    <asp:TextBox ID="txbName" runat="server" Width="220px" 
+                        ontextchanged="txbName_TextChanged"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="vlRequiredName" runat="server" 
