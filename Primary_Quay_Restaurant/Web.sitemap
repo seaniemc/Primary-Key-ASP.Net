@@ -6,7 +6,7 @@
 
     <siteMapNode url="~/Content Pages/Order.aspx" title="Order"  description="Order Page">
       <siteMapNode url="~/Content Pages/Login.aspx" title="Login" description="Login Page" />
-      <siteMapNode url="~/Content Pages/UserReg.aspx" title="User Registration" description="User Registration" />
+      <siteMapNode url="~/Content Pages/UserReg.aspx" title="Registration" description="User Registration" />
     </siteMapNode>
   </siteMapNode>
 </siteMap>

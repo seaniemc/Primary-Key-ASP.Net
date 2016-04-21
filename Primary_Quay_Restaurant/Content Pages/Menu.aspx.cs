@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class Menu : System.Web.UI.Page
 {
-    private double mealprice = 0;
+    private static double mealprice = 0;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -76,8 +76,13 @@ public partial class Menu : System.Web.UI.Page
 
     protected void btnMakeOrder_Click(object sender, EventArgs e)
     {
-        sdsOrder.InsertParameters["orderid"].DefaultValue = String.Format("{0}", mealprice);
         sdsOrder.Update();
+
+        Response.Redirect("completeOrder.aspx");
+
+        mealprice = 0;
+
+
 
         //if (orderlist != null)
         //{

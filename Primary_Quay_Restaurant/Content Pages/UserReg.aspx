@@ -190,7 +190,6 @@
 
     <div id="buttons">
 
-        <asp:Button ID="btnBack" runat="server" Text="Back" Width="116px" />
 &nbsp;
         <asp:Button ID="btnClear" runat="server" Text="Clear" Width="116px" 
             CausesValidation="False" onclick="btnClear_Click" UseSubmitBehavior="False" />

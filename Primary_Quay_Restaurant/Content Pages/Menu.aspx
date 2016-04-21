@@ -106,7 +106,7 @@
         SelectCommand="SELECT orderid, userid, price, orderdate, complete FROM [order] WHERE (orderid = @orderid)" 
         DeleteCommand="DELETE FROM orderlist WHERE (mealid = @mealid)" 
         
-        UpdateCommand="UPDATE [order] SET price = @price WHERE (orderid = @orderid)">
+        UpdateCommand="UPDATE [order] SET complete=1 WHERE (orderid = @orderid)">
         <DeleteParameters>
             <asp:Parameter Name="mealid" />
         </DeleteParameters>
@@ -114,7 +114,6 @@
             <asp:CookieParameter CookieName="orderid" Name="orderid" />
         </SelectParameters>
         <UpdateParameters>
-            <asp:Parameter Name="price" />
             <asp:Parameter Name="orderid" />
         </UpdateParameters>
     </asp:SqlDataSource>
