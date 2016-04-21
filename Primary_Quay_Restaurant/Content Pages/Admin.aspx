@@ -5,9 +5,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <h2>Administrator Page</h2>
+    <h2 align="center">Administrator Page</h2>
 
-    <table class="style4">
+    <div style="text-align: center;">
+        <table align="center" class="style4">
         <tr>
             <td class="style3">
         <asp:GridView ID="gbwCustomers" runat="server" AllowPaging="True" 
@@ -47,11 +48,6 @@
         </asp:GridView>
             </td>
             <td class="style5">
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td class="style3">
-                <br />
                 <asp:DetailsView ID="dvwCustomerDetails" runat="server" 
                     DataSourceID="dsRegisteredCustomersDetails" Height="50px" 
                     onitemdeleted="dvwCustomerDetails_ItemDeleted" 
@@ -87,11 +83,15 @@
                 </asp:DetailsView>
                 <br />
                 <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
-                <br />
-                <br />
+                </td>
+        </tr>
+        <tr>
+            <td class="style3">
             </td>
         </tr>
     </table>
+
+    </div>
         <asp:SqlDataSource ID="dsRegisteredCustomers" runat="server" 
             ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
             SelectCommand="SELECT * FROM [users]"></asp:SqlDataSource>
@@ -133,5 +133,7 @@
                 <asp:Parameter Name="id" Type="Int32" />
             </UpdateParameters>
     </asp:SqlDataSource>
-            <br />
+            <br /><br /><br />
+            <br /><br /><br />
+            <br /><br /><br />
 </asp:Content>

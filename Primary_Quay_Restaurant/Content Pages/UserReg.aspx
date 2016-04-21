@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="UserReg.aspx.cs" Inherits="UserReg" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="UserReg.aspx.cs" Inherits="UserReg" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link rel="stylesheet" type="text/css" href="../styles/userReg.css" />
@@ -11,71 +12,72 @@
     
     <div id="user">
     <p>User Details</p>
-        <table class="style1">
-            <tr>
-                <td width="200">
-                    <asp:Label ID="Label1" runat="server" Text="Name:" Font-Names="Calibri"></asp:Label>
-                </td>
-                <td width="250">
-                    <asp:TextBox ID="txbName" runat="server" Width="220px" 
-                        ontextchanged="txbName_TextChanged"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="vlRequiredName" runat="server" 
-                        ErrorMessage="Name required." ControlToValidate="txbName" 
-                        Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td width="200">
-                    <asp:Label ID="Label2" runat="server" Text="Age:" Font-Names="Calibri"></asp:Label>
-                </td>
-                <td width="250">
-                    <asp:TextBox ID="txbAge" runat="server" Width="220px"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="vlRequiredAge" runat="server" 
-                        ErrorMessage="Age required." ControlToValidate="txbAge" Display="Dynamic" 
-                        ForeColor="Red">*</asp:RequiredFieldValidator>
-                    <asp:RangeValidator ID="vlAgeRange" runat="server" ControlToValidate="txbAge" 
-                        ErrorMessage="You must be over 18." ForeColor="Red" MaximumValue="99" 
-                        MinimumValue="18" Type="Integer">*</asp:RangeValidator>
-                </td>
-            </tr>
-            <tr>
-                <td width="200">
-                    <asp:Label ID="Label3" runat="server" Text="Email:" Font-Names="Calibri"></asp:Label>
-                </td>
-                <td width="250">
-                    <asp:TextBox ID="txbEmail" runat="server" Width="220px"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="vlRequiredEmail" runat="server" 
-                        ControlToValidate="txbEmail" Display="Dynamic" ErrorMessage="Email required." 
-                        ForeColor="Red">*</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="vlEmailPatern" runat="server" 
-                        ControlToValidate="txbEmail" ErrorMessage="Must be email." ForeColor="Red" 
-                        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
-                </td>
-            </tr>
-            <tr>
-                <td width="200">
-                    <asp:Label ID="Label4" runat="server" Text="Phone Num.:" Font-Names="Calibri"></asp:Label>
-                </td>
-                <td width="250">
-                    <asp:TextBox ID="txbPhone" runat="server" Width="220px"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:RequiredFieldValidator ID="vlRequiredPhone" runat="server" 
-                        ErrorMessage="Phone required" ControlToValidate="txbPhone" 
-                        Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
-                </td>
-            </tr>
-        </table>
-        
+           
+            <table class="style1">
+              <tr>
+                 <td width="200">
+                        <asp:Label ID="Label1" runat="server" Text="Name:" Font-Names="Calibri"></asp:Label>
+                    </td>
+                    <td width="250">
+                        <asp:TextBox ID="txbName" runat="server" Width="220px" 
+                            ontextchanged="txbName_TextChanged"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="vlRequiredName" runat="server" 
+                            ErrorMessage="Name required." ControlToValidate="txbName" 
+                            Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200">
+                        <asp:Label ID="Label2" runat="server" Text="Age:" Font-Names="Calibri"></asp:Label>
+                    </td>
+                    <td width="250">
+                        <asp:TextBox ID="txbAge" runat="server" Width="220px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="vlRequiredAge" runat="server" 
+                            ErrorMessage="Age required." ControlToValidate="txbAge" Display="Dynamic" 
+                            ForeColor="Red">*</asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="vlAgeRange" runat="server" ControlToValidate="txbAge" 
+                            ErrorMessage="You must be over 18." ForeColor="Red" MaximumValue="99" 
+                            MinimumValue="18" Type="Integer">*</asp:RangeValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200">
+                        <asp:Label ID="Label3" runat="server" Text="Email:" Font-Names="Calibri"></asp:Label>
+                    </td>
+                    <td width="250">
+                        <asp:TextBox ID="txbEmail" runat="server" Width="220px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="vlRequiredEmail" runat="server" 
+                            ControlToValidate="txbEmail" Display="Dynamic" ErrorMessage="Email required." 
+                            ForeColor="Red">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="vlEmailPatern" runat="server" 
+                            ControlToValidate="txbEmail" ErrorMessage="Must be email." ForeColor="Red" 
+                            ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200">
+                        <asp:Label ID="Label4" runat="server" Text="Phone Num.:" Font-Names="Calibri"></asp:Label>
+                    </td>
+                    <td width="250">
+                        <asp:TextBox ID="txbPhone" runat="server" Width="220px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="vlRequiredPhone" runat="server" 
+                            ErrorMessage="Phone required" ControlToValidate="txbPhone" 
+                            Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+            </table>
     </div>
     <div id="address">
     <p>Address</p>
+
         <table class="style1">
             <tr>
                 <td width="200">
@@ -127,6 +129,7 @@
                         ErrorMessage="County required." ControlToValidate="ddlCounty" 
                         Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
+
             </tr>
         </table>
     </div>
