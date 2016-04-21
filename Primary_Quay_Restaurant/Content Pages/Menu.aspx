@@ -74,10 +74,9 @@
                 runat="server"
                 Text="There is no quantity for selected item." Visible="False" ForeColor="Red">
             </asp:Label>
-            
+        </div>
 
-            
-
+        <div id="confirmlist">
         </div>
 
         <!--:::::::::::::::::: MAKE ORDER BUTTON ::::::::::::::::::-->
@@ -103,12 +102,21 @@
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="sdsOrder" runat="server" 
         ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
-        InsertCommand="INSERT INTO [order] (userid, price) VALUES (@userid, @price)" 
-        SelectCommand="SELECT MAX(orderid) FROM [order]">
-        <InsertParameters>
-            <asp:Parameter Name="userid" />
+        
+        SelectCommand="SELECT orderid, userid, price, orderdate, complete FROM [order] WHERE (orderid = @orderid)" 
+        DeleteCommand="DELETE FROM orderlist WHERE (mealid = @mealid)" 
+        
+        UpdateCommand="UPDATE [order] SET price = @price WHERE (orderid = @orderid)">
+        <DeleteParameters>
+            <asp:Parameter Name="mealid" />
+        </DeleteParameters>
+        <SelectParameters>
+            <asp:CookieParameter CookieName="orderid" Name="orderid" />
+        </SelectParameters>
+        <UpdateParameters>
             <asp:Parameter Name="price" />
-        </InsertParameters>
+            <asp:Parameter Name="orderid" />
+        </UpdateParameters>
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="sdsOrderlist" runat="server" 
         ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
