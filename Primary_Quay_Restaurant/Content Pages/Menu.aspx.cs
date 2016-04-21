@@ -78,53 +78,11 @@ public partial class Menu : System.Web.UI.Page
     {
         sdsOrder.Update();
 
+        ViewState.Add("totalPrice", Convert.ToString(mealprice));
+
         Response.Redirect("completeOrder.aspx");
 
         mealprice = 0;
-
-
-
-        //if (orderlist != null)
-        //{
-        //    double totalPrice = 0;
-
-        //    foreach (OrderList order in orderlist)
-        //    {
-        //        totalPrice += order.price;
-        //    }
-
-        //    addCookie("userid", "1001");
-
-        //    // insert into users
-        //    sdsOrder.InsertParameters["userid"].DefaultValue = Request.Cookies["userid"].Value;
-        //    sdsOrder.InsertParameters["price"].DefaultValue = Convert.ToString(totalPrice);
-
-        //    sdsOrder.Insert();
-
-        //    // retrieve id form order table
-        //    DataView dv = (DataView)sdsOrder.Select(new DataSourceSelectArguments());
-        //    int id = (int)dv.Table.Rows[0][0];
-        //    addCookie("orderid", String.Format("{0}", id));
-
-        //    // populate orderlist database;
-        //    foreach (OrderList order in orderlist)
-        //    {
-        //        sdsOrderlist.InsertParameters["orderid"].DefaultValue = String.Format("{0}", id);
-        //        sdsOrderlist.InsertParameters["mealid"].DefaultValue = String.Format("{0}", order.mealid);
-        //        sdsOrderlist.InsertParameters["qty"].DefaultValue = String.Format("{0}", order.qty);
-
-        //        sdsOrderlist.Insert();
-        //    }
-
-        //    // empty List
-        //    orderlist.Clear();
-
-        //    // delete cookie
-        //    deleteCookie("userid");
-
-        //    // redirect into order page
-        //    Response.Redirect("Order.aspx");
-        //}
     }
 
     private void addCookie(string name, string value)

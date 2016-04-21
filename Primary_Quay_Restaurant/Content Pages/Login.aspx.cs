@@ -49,6 +49,9 @@ public partial class Content_Pages_Login : System.Web.UI.Page
                 string username = String.Format("{0}", table.Rows[i][1]);
                 string password = String.Format("{0}", table.Rows[i][2]);
 
+                // Session stores an email
+                Session["Username"] = username;
+
                 if (username.Equals(tbxUsername.Text, StringComparison.OrdinalIgnoreCase))
                 {
                     if (password.Equals(txbPassword.Text, StringComparison.Ordinal))

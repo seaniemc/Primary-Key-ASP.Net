@@ -25,11 +25,13 @@
     
     <!--::::::::::::::::::::::::::::PAGE CONTENT HERE:::::::::::::::::::::::::::::::-->
 
-    <h3>Thanks for the order:</h3>
+    <h3>Thanks 
+        <asp:Label ID="lblName" runat="server" Text=""></asp:Label> for the order:</h3>
 
     <div id="noteDiv">
 
-        <p>Order complete successfuly.<br />Thanks for Ordering in Primary Quey Restourant.</p>
+        <p>Order complete successfuly (The price is 
+            <asp:Label ID="lblPrice" runat="server" Text=""></asp:Label>).<br />Thanks for Ordering in Primary Quey Restourant.</p>
     </div>
 
     <div id="btns">

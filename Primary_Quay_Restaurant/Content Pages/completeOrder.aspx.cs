@@ -9,7 +9,9 @@ public partial class Content_Pages_completeOrder : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        string name = HttpContext.Current.Session["Username"].ToString();
+        lblName.Text = name;
+        lblPrice.Text = String.Format("{0}", ViewState["totalPrice"]);
     }
     protected void btnHomePage_Click(object sender, EventArgs e)
     {
