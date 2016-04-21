@@ -156,7 +156,10 @@
 
             <tr>
                 <td class="style2" width="33%">
-                    &nbsp;</td>
+                    <asp:TreeView ID="TreeView1" runat="server" 
+                        DataSourceID="SiteMapDataSourceTree">
+                    </asp:TreeView>
+                </td>
 
                 <td class="style3" align="center">
 
@@ -203,6 +206,10 @@
 
     </form>
 </div>
+
+    <asp:SiteMapDataSource ID="SiteMapDataSourceTree" runat="server" />
 </body>
+
+
 
 </html>
