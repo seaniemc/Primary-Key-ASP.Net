@@ -9,7 +9,13 @@ public partial class Content_Pages_Admin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (HttpContext.Current.Request.Cookies["isadmin"] != null)
+        {
+            if(Convert.ToInt32(HttpContext.Current.Request.Cookies["isadmin"]) == 0)
+                Response.Redirect("Home.aspx");
+        }
+        else
+            Response.Redirect("Home.aspx");
     }
 
     protected void dvwCustomerDetails_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)

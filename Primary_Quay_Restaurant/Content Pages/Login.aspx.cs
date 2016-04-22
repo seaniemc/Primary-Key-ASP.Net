@@ -62,6 +62,13 @@ public partial class Content_Pages_Login : System.Web.UI.Page
                         lblUser.Text = "Hello " + username + ", press Logout button if you want to be loged out.";
                         loginSection.Visible = false;
                         logedin.Visible = true;
+
+                        // retrieve admin status
+                        DataView dv2 = (DataView)sdsIsAdmin.Select(new DataSourceSelectArguments());
+                        DataTable t = dv2.Table;
+
+                        addCookie("isadmin", String.Format("{0}", t.Rows[0][0]));
+
                         return;
                     }
                     else

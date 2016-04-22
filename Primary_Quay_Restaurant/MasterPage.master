@@ -63,6 +63,11 @@
             height : 23px;
             width: 28%;
         }
+        
+        .admin
+        {
+            display: inline-block;
+        }
     </style>
  
 </head>
@@ -94,13 +99,13 @@
 
                 
 
-                    <div id="MenuNav" style="width: 700px; margin: 1px auto; display: block; text-align: ceneter;">
+                    <div id="MenuNav" style="border: 0px solid black; width: 670px; margin: 1px auto; display: block; text-align: center;">
 
                         <asp:Menu ID="HorizontalNav" 
                                   Orientation="Horizontal" 
                                   runat="server" 
                                   RenderingMode="List" 
-                                  ItemWrap="True" Width="700px" Font-Size="18px">
+                                  ItemWrap="True" Width="680px" Font-Size="18px">
 
                             <Items>
                                 <asp:MenuItem NavigateUrl="~/Content Pages/Home.aspx" Text="Home"/>
@@ -123,8 +128,14 @@
                             <StaticSelectedStyle Font-Bold="False" Font-Size="XX-Large" />
 
                         </asp:Menu>
-
                     </div>
+
+                    <div runat="server" id="admin" class="admin">
+                            <asp:Button ID="btnAdmin" runat="server" Text="Admin" 
+                                onclick="btnAdmin_Click" /></div>
+                    <div runat="server" id="logoff" class="admin">
+                            <asp:Button ID="btnLogoff" runat="server" Text="Logoff" 
+                                onclick="btnLogoff_Click" /></div>
 
                     <div id="sitMapPathDiv">
                         <asp:SiteMapPath ID="SiteMapPath1" runat="server">

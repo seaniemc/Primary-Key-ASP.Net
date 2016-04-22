@@ -78,7 +78,7 @@ public partial class Menu : System.Web.UI.Page
     {
         sdsOrder.Update();
 
-        ViewState.Add("totalPrice", Convert.ToString(mealprice));
+        addCookie("totalPrice", Convert.ToString(mealprice));
 
         Response.Redirect("completeOrder.aspx");
 

@@ -60,5 +60,12 @@
     <asp:SqlDataSource ID="sdsLogin" runat="server" 
         ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
         SelectCommand="SELECT login.* FROM login"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="sdsIsAdmin" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:primary_quey_restourantConnectionString %>" 
+        SelectCommand="SELECT [isadmin] FROM [users] WHERE ([id] = @id)">
+        <SelectParameters>
+            <asp:CookieParameter CookieName="userid" Name="id" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
 </asp:Content>
 
