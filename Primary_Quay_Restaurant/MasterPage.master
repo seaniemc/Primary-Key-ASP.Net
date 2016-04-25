@@ -86,7 +86,7 @@
                     <asp:Image ID="imgLogoImage" 
                                runat="server" 
                                Height="180px" 
-                               ImageUrl="~/Images/stolen_pic.jpg" 
+                               ImageUrl="~/Images/candles 2.jpg" 
                                Width="1000px" />
 
                 </td>

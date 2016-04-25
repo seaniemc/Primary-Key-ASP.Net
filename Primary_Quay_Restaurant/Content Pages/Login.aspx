@@ -51,7 +51,7 @@
 
             <div id="btns">
                 <asp:Button ID="btnRegister" CssClass="btnLogin" runat="server" Text="Register" 
-                    Width="104px" onclick="btnRegister_Click" />
+                    Width="104px" onclick="btnRegister_Click" CausesValidation="False" />
                 <asp:Button ID="btnLogin" runat="server" CssClass="btnLogin" Text="Login" 
                     Width="104px" onclick="btnLogin_Click" />
             </div>

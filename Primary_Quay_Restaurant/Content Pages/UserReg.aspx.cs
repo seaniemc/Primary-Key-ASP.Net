@@ -70,6 +70,8 @@ public partial class UserReg : System.Web.UI.Page
                 txbPass.Text = "";
                 txbPass2.Text = "";
 
+                Response.Redirect("regConfirm.aspx");
+
             }
             catch (Exception ex)
             {

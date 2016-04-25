@@ -79,10 +79,9 @@ public partial class Menu : System.Web.UI.Page
         sdsOrder.Update();
 
         addCookie("totalPrice", Convert.ToString(mealprice));
+        mealprice = 0;
 
         Response.Redirect("completeOrder.aspx");
-
-        mealprice = 0;
     }
 
     private void addCookie(string name, string value)

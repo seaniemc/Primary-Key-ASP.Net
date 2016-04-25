@@ -14,7 +14,7 @@
         <asp:GridView ID="gbwCustomers" runat="server" AllowPaging="True" 
             DataSourceID="dsRegisteredCustomers" AllowSorting="True" 
             AutoGenerateColumns="False" DataKeyNames="id" CellPadding="5" ForeColor="#333333" 
-                    GridLines="Both" >
+                    GridLines="Both" PageSize="5" >
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" 

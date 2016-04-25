@@ -25,7 +25,7 @@
                     <td>
                         <asp:RequiredFieldValidator ID="vlRequiredName" runat="server" 
                             ErrorMessage="Name required." ControlToValidate="txbName" 
-                            Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                            Display="Dynamic" ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -38,7 +38,7 @@
                     <td>
                         <asp:RequiredFieldValidator ID="vlRequiredAge" runat="server" 
                             ErrorMessage="Age required." ControlToValidate="txbAge" Display="Dynamic" 
-                            ForeColor="Red">*</asp:RequiredFieldValidator>
+                            ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                         <asp:RangeValidator ID="vlAgeRange" runat="server" ControlToValidate="txbAge" 
                             ErrorMessage="You must be over 18." ForeColor="Red" MaximumValue="99" 
                             MinimumValue="18" Type="Integer">*</asp:RangeValidator>
@@ -54,7 +54,7 @@
                     <td>
                         <asp:RequiredFieldValidator ID="vlRequiredEmail" runat="server" 
                             ControlToValidate="txbEmail" Display="Dynamic" ErrorMessage="Email required." 
-                            ForeColor="Red">*</asp:RequiredFieldValidator>
+                            ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="vlEmailPatern" runat="server" 
                             ControlToValidate="txbEmail" ErrorMessage="Must be email." ForeColor="Red" 
                             ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
@@ -70,7 +70,7 @@
                     <td>
                         <asp:RequiredFieldValidator ID="vlRequiredPhone" runat="server" 
                             ErrorMessage="Phone required" ControlToValidate="txbPhone" 
-                            Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                            Display="Dynamic" ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
             </table>
@@ -89,7 +89,7 @@
                 <td>
                     <asp:RequiredFieldValidator ID="vlRequiredStreet" runat="server" 
                         ErrorMessage="Street required" ControlToValidate="txbStreet1" 
-                        Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        Display="Dynamic" ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -112,7 +112,7 @@
                 <td>
                     <asp:RequiredFieldValidator ID="vlRequiredCity" runat="server" 
                         ErrorMessage="City/Town required" ControlToValidate="txbCity" 
-                        Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        Display="Dynamic" ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -127,7 +127,7 @@
                 <td>
                     <asp:RequiredFieldValidator ID="vlRequiredCounty" runat="server" 
                         ErrorMessage="County required." ControlToValidate="ddlCounty" 
-                        Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        Display="Dynamic" ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                 </td>
 
             </tr>
@@ -148,7 +148,7 @@
                 <td>
                     <asp:RequiredFieldValidator ID="vlRequiredUsername" runat="server" 
                         ErrorMessage="Username required" ControlToValidate="txbUsername" 
-                        Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        Display="Dynamic" ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -161,7 +161,7 @@
                 <td>
                     <asp:RequiredFieldValidator ID="vlRequiredPass" runat="server" 
                         ErrorMessage="Password required" ControlToValidate="txbPass" 
-                        Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        Display="Dynamic" ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="vlPassPattern" runat="server" 
                         ControlToValidate="txbPass" ErrorMessage="Password is not valid." 
                         ForeColor="Red" ValidationExpression="[A-Za-z0-9]{8,16}">*</asp:RegularExpressionValidator>
@@ -178,7 +178,7 @@
                 <td>
                     <asp:RequiredFieldValidator ID="vlRequiredPass2" runat="server" 
                         ErrorMessage="Confirm password required." ControlToValidate="txbPass2" 
-                        Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        Display="Dynamic" ForeColor="Red" ValidationGroup="RequiredFieldGroup">*</asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="vlPassCompare" runat="server" 
                         ControlToCompare="txbPass" ControlToValidate="txbPass2" 
                         ErrorMessage="Password is not matched." ForeColor="Red">*</asp:CompareValidator>

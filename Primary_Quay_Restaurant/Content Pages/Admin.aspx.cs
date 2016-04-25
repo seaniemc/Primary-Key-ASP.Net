@@ -11,7 +11,7 @@ public partial class Content_Pages_Admin : System.Web.UI.Page
     {
         if (HttpContext.Current.Request.Cookies["isadmin"] != null)
         {
-            if(Convert.ToInt32(HttpContext.Current.Request.Cookies["isadmin"]) == 0)
+            if(Convert.ToInt32(HttpContext.Current.Request.Cookies["isadmin"].Value) == 0)
                 Response.Redirect("Home.aspx");
         }
         else
